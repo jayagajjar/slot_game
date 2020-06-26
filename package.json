@@ -11,23 +11,12 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "npm run start",
-    "build": "npm run build"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "build": "concurrently \"cd client && npm run build\" \"cd server && npm run build\"",
+    "clean": "concurrently \"rimraf node_modules\" \"cd client && rimraf node_modules build\" \"cd server && rimraf node_modules build\"",
+    "heroku-postbuild": "npm run build",
+    "install": "(cd client && npm install) && (cd server && npm install)",
+    "start": "concurrently \"cd client && PORT=3002 npm run start\" \"cd server && PORT=3001 npm run start\"",
+    "start:prod": "cd server && npm run start:prod"
   }
 }
 
