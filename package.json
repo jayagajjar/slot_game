@@ -13,7 +13,6 @@
   "scripts": {
     "build": "npm run build",
     "heroku-postbuild": "npm run build",
-    "install": "npm install",
     "start": "npm run start",
     "start:prod": "npm run start:prod"
   }
