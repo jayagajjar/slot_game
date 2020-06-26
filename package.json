@@ -14,7 +14,7 @@
     "build": "npm run build",
     "heroku-postbuild": "npm run build",
     "install": "npm install",
-    "start": "PORT=3002 npm run start",
+    "start": "npm run start",
     "start:prod": "npm run start:prod"
   }
 }
