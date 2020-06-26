@@ -130,69 +130,14 @@ function App(){
     <div className="container-fluid">
     <div className="row">
         <div className="col">
-        <table width="100%"><tbody>
-        <tr><td className="title_div">
-          Kilograms
-          <button title="Click to see Home page" className="balance_scale_btn" onClick={showIndexPage}>
-            <img
-              className="balance_scale_image"
-              src="images/balance_scale.png"
-              alt=""
-            />
-          </button>
-          </td>
-          </tr></tbody>
-          </table>
+        <image src="images/symbols/1.png"></image>
+        <image src="images/symbols/2.png"></image>
+        <image src="images/symbols/3.png"></image>
+
         </div>
       </div>
-    <div className="row">
-      <div className="col nav_container" >
-      <div className="pantry_status_heading">
-            Your Pantry Status
-      </div>
-      <div className="top_button_right_cells">
-      
-      <button title="Home" className="nav_btn" onClick={showIndexPage}><img src="images/home_icon.png" style={{width:"2em"}}  alt="HomeIconImage"/></button>
-      <button title="Shopping List" className="nav_btn" onClick={handleShow}><img src="images/date.png" style={{width:"2em"}}  alt="shoppingListImage"/></button>
-      <button title="WIP" className="nav_btn" ><img src="images/plus.png" style={{width:"2em"}} alt="addItemImage"/></button>
-       
-        <Route pathname="/shoppinglist"
-                    exact
-                    component={() => 
-                    <ModalShoppingList isLoaded={isModalLoaded} show={show} onClose={showModal} onChecked={deleteItem} onLoad={loadShoppingList}/>}
-                />
-                
-
-                <Modal id="shoppingListModal" show={show1} onHide={handleClose}>
-        <Modal.Header className="shoppinListModalTitle" closeButton>
-          <Modal.Title >Shopping List</Modal.Title>
-        </Modal.Header><table><tbody><tr><td><div id="removeInstruction">Click on the items to remove</div></td>
-        <td style={{'textAlign': 'center'}}><img id="printImg" src="images/print.png" onClick={printShoppingListModal} style={{width:"2em"}}  alt="PrintIconImage"/>
-        </td></tr></tbody></table> 
-        <Modal.Body className="shoppinListModal">{show.shoppingItems.map((a,index)=> <li onClick={(e) => {
-        deleteItem(a.id);
-        }} key={a.id}>{a.name}</li> )}</Modal.Body>
-      </Modal>
-      </div>
-      </div>
-    </div>
-
-    <div className="row">
     
-      {items.map((anItem) => {
-        return (
-          <div className="col-lg-6 " key={anItem.id}><Item onAdd={addItem}
-      currWeight={anItem.currWeight}
-      name={anItem.name}
-      minWeightReq={anItem.minWeightReq}
-      image={anItem.image}
-      isItemAdded={show.shoppingItems.filter(a => a.name === anItem.name).length > 0}
-          /></div>
-        );
-      })}
-   
-     
-    </div>
+
     
 </div>
 );
