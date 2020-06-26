@@ -1,0 +1,59 @@
+[
+{
+    "id":1,
+    "name":"Biscuit",
+    "currWeight":500,
+    "minWeightReq":200,
+    "image":"biscuits"
+},
+{
+    "id":2,
+    "name":"Sugar",
+    "currWeight":400,
+    "minWeightReq":200,
+    "image":"sugar"
+}  ,
+{
+    "id":3,
+    "name":"Kidney Beans",
+    "currWeight":400,
+    "minWeightReq":200,
+    "image":"kidney_beans"
+}  ,
+{
+    "id":4,
+    "name":"Milo Cereal",
+    "currWeight":400,
+    "minWeightReq":200,
+    "image":"milo_cereal"
+}  
+,
+{
+    "id":5,
+    "name":"Soy Beans",
+    "currWeight":400,
+    "minWeightReq":200,
+    "image":"soy_beans"
+},
+{
+    "id":6,
+    "name":"Lentils Gram",
+    "currWeight":400,
+    "minWeightReq":200,
+    "image":"lentil_gram"
+},
+{
+    "id":7,
+    "name":"Nutrigrain",
+    "currWeight":400,
+    "minWeightReq":200,
+    "image":"nutrigrain_"
+},
+{
+    "id":8,
+    "name":"Cheerios",
+    "currWeight":400,
+    "minWeightReq":200,
+    "image":"cheerios_"
+}  
+]

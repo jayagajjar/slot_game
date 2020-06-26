@@ -1,0 +1,236 @@
+body{
+  background-color: #eaeaea;
+}
+h1{
+  font-family: 'Dancing Script', cursive;
+  font-size: 5rem;
+  color: #364f6b;
+  text-align: right;
+}
+h2{
+  font-family: 'Sacramento', cursive;
+  color: #de4775;
+  font-size: 1.5rem;
+  text-align: center;
+}
+a {
+  background:
+     linear-gradient(
+       to bottom, rgba(163, 148, 152, 0.123) 0%,
+       rgba(136, 73, 89, 0.425) 100%
+     );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 0px 4px;
+  color: #014d73;
+  text-decoration: none;
+  transition: background-size .5s;
+}
+
+a:hover {
+  background-size: 4px 50px;
+  text-decoration: none;
+  color: #de4775;
+}
+.title_div{
+  font-family: 'Dancing Script', cursive;
+  font-size: 4rem;
+  color: #014d73;
+  text-align: center;
+  margin: 0;
+}
+.description_div{
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: #014d73;
+  text-align: center;
+  margin: 0;
+  align-self: center;
+  padding-bottom: 2.5rem;
+}
+.nav_container{
+  width: 100px;
+  
+  position: relative;
+  background-color: #f788a2;
+ 
+}
+.pantry_status_heading{
+  font-family: 'Slabo 27px', serif;
+  color: #364f6b;
+  font-size: 2rem;
+  text-align: center;
+ 
+  height:2.3rem;
+  line-height: normal;
+  padding: 0;
+}
+@media (max-width: 991px) {
+  .pantry_status_heading{
+    text-align: left;
+  }
+}
+.top_button_left_cells{
+  font-family: 'Roboto', sans-serif;
+  color:#364f6b;
+  font-size: 1rem;
+  text-align: left;
+  padding-left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.top_button_right_cells{
+  font-family: 'Roboto', sans-serif;
+  color:#364f6b;
+  font-size: 1rem;
+  
+  padding-left: 0;
+  padding-top: 3px;
+  text-align: right;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
+}
+@media (max-width: 991px) {
+  .nav_btn{
+    padding-left: .2rem;
+    padding-right: .2rem;
+  }
+}
+
+.top_bar_btn{
+  background-color: #f788a2;
+}
+
+.balance_scale_div{
+  padding-top: 20px;
+  padding-left: 0px;
+}
+.balance_scale_btn{
+  border: none;
+  background: none;
+  
+}
+button:focus {outline:0;}
+.balance_scale_image{
+  margin-left: .5rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+.pantry_image{
+  width: 18rem;
+}
+.pantry_image_left_div{
+  text-align: center;
+  
+}
+.pantry_image_right_div{
+  text-align: center;
+  
+}
+.app_image{
+  width: 12rem;
+  border-radius: 11%
+  
+}
+.idea-detail{
+  font-family: 'Slabo 27px', serif;
+  color: #1d3e63;
+}
+.credits{
+  font-size: 0.7rem;
+  text-align: center;
+}
+.item_icon_image{
+  width: 6rem;
+  
+}
+.item_icon_div{
+  padding-left: 0px;
+}
+
+.add_to_list_div{
+  padding:0;
+  align-self: center;
+
+}
+.one_item_status  {
+  font-family: 'Roboto', sans-serif;
+  color: #364f6b;
+  background-color:#dbd7d7;
+  border-style:solid;
+  border-color:#f0ebeb;
+  border-width:1px;
+  padding: 0;
+}
+.item_details{
+  align-self: center;
+}
+
+
+.nav_btn,.add_to_list_btn{
+  background: none;
+  border: 0;
+}
+
+.add_to_list_img{
+  height: 3rem;
+  background: none;
+}
+.add_to_list_btn:hover{
+  transform: scale(1.05)
+}
+  
+  
+
+
+
+.shoppinListModalTitle{
+  background-color:#f788a2;}
+.shoppinListModal{
+  background-color:#eaeaea;}
+
+
+  
+  
+  @media screen {
+    #printSection {
+        display: none;
+    }
+  }
+  
+  @media print {
+    body * {
+      visibility:hidden;
+    }
+   
+    #printSection, #printSection * {
+      visibility:visible;
+    }
+    #printSection {
+      position:absolute;
+      left:0;
+      top:0;
+    }
+    #printImg, #removeInstruction{
+      visibility: hidden;
+    }
+  }
+
+
+  
+  
