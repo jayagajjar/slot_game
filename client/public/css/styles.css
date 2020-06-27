@@ -130,7 +130,9 @@ button:focus {outline:0;}
   display: inline-block;
   border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
-
+.symbol_image{
+  width: 8rem;
+}
 .pantry_image{
   width: 18rem;
 }
