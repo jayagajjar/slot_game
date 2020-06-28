@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from "react";
-import items from "./data/items.json";
+import reels from "./data/reels.json";
 import gameconfig from "./data/gameconfig.json";
 import Reel from "./Reel.jsx";
 import Force from "./Force";
@@ -10,17 +10,26 @@ let forceGameConfig=[
 {
   "reelstops":""  }
 ];
+function getRandomReelStop(){
+  let randomReelStop=[];
+  randomReelStop.push(reels.map((aReel,key)=>{return Math.floor(Math.random()*(aReel.reel.split(",").length))}));
+  return randomReelStop;
+}
 const [reelStop, setReelStop] = useState([]);
   
   function myCallback(value){
       forceGameConfig.map((gc)=>{return gc.reelstops=value});
   }
   function handleClick(){
+    
       forceGameConfig.map((gc)=>{
         if(gc.reelstops!=""){
           setReelStop(forceGameConfig.map((gc)=>{return gc.reelstops.split(',')}))
         }
-    else{setReelStop(gameconfig.map((gc)=>{return gc.reelstops.split(',')}))}})
+      else{
+        setReelStop(getRandomReelStop());
+        //setReelStop(gameconfig.map((gc)=>{return gc.reelstops.split(',')}))
+      }})
   }
   
   useEffect(() => {
@@ -57,12 +66,26 @@ const [reelStop, setReelStop] = useState([]);
        
         for(var i in gc.winlines)
         result.push([i, gc.winlines [i]]);
-          result.map((b,key)=>{if(b[1]==a.positions){
-            document.getElementById("windetails").innerHTML+= "Win Line "+key+" Symbol: "+a.symbolID+"<br>";
+          result.map((b,key)=>{
+            if(b[1]==a.positions){
+            document.getElementById("windetails").innerHTML+= "Win Line "+key+" Symbol: "+a.symbolID+": 5 of a kind<br>";
             //console.log("Win Line "+key+" Symbol: "+a.symbolID)
-          }else{
-            //console.log("no win")
-          }})
+            return;
+            }else {
+              let c= b[1].split(",");
+              c.pop();
+              if(c.toString() == a.positions){
+                document.getElementById("windetails").innerHTML+= "Win Line "+key+" Symbol: "+a.symbolID+": 4 of a kind<br>";
+              }
+              else{
+                let c= b[1].split(",");
+              c.pop();c.pop();
+              if(c.toString() == a.positions){
+                document.getElementById("windetails").innerHTML+= "Win Line "+key+" Symbol: "+a.symbolID+": 3 of a kind<br>";
+              }
+              }
+            }
+              })
       })
     })
   }
@@ -74,7 +97,7 @@ const [reelStop, setReelStop] = useState([]);
     <div className="row">
       
             {
-              items.map((aReel,key)=>{
+              reels.map((aReel,key)=>{
                 return <Reel 
                 key={key}
                 reelData={aReel.reel} 
