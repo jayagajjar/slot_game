@@ -85,15 +85,15 @@ const [reelStop, setReelStop] = useState([]);
                 })
             }
        
-      <div className="col-1" style={{ alignSelf: "center"}}>
+      <div style={{ alignSelf: "center"}}>
       
           <img className="start_btn_img" src="images/power.png" onClick={handleClick} ></img>
         </div>
-        <div className="col">
+        <div>
         <div id="windetails"/>
         </div>
-        <div className="col">
-<div className="row"><Force callbackFromParent={myCallback} value="0,0,0,0,0"/>
+        <div>
+<div><Force callbackFromParent={myCallback} value="0,0,0,0,0"/>
       </div>
 </div>
 </div>

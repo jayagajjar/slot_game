@@ -133,6 +133,11 @@ button:focus {outline:0;}
 .symbol_image{
   width: 9rem;
 }
+@media (max-width: 991px) {
+  .symbol_image{
+    width: 3rem;
+  }
+}
 .pantry_image{
   width: 18rem;
 }
