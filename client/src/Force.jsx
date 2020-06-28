@@ -10,7 +10,8 @@ function Force(props){
 return (
  <div>
  
-    <input type="text" name="forcedreelstops" id="forcedreelstops" value={count} onChange={handleChange} />
+    <input type="text" name="forcedreelstops" id="forcedreelstops" 
+    value={count} onChange={handleChange} />
 
  </div>   
 )

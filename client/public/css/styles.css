@@ -131,7 +131,7 @@ button:focus {outline:0;}
   border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
 .symbol_image{
-  width: 8rem;
+  width: 9rem;
 }
 .pantry_image{
   width: 18rem;
@@ -189,9 +189,11 @@ button:focus {outline:0;}
   border: 0;
 }
 
-.add_to_list_img{
-  height: 3rem;
+.start_btn_img{
+  height: 5rem;
   background: none;
+  border: 0;
+ 
 }
 .add_to_list_btn:hover{
   transform: scale(1.05)
