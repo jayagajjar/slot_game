@@ -2,7 +2,7 @@ body{
   background-color: #eaeaea;
 }
 h1{
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Cabin', cursive;
   font-size: 5rem;
   color: #364f6b;
   text-align: right;
@@ -33,14 +33,14 @@ a:hover {
   color: #de4775;
 }
 .title_div{
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Cabin', cursive;
   font-size: 4rem;
-  color: #014d73;
+  color:black;
   text-align: center;
   margin: 0;
 }
 .description_div{
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Cabin', cursive;
   font-size: 3rem;
   color: #014d73;
   text-align: center;
@@ -113,10 +113,16 @@ a:hover {
   padding-top: 20px;
   padding-left: 0px;
 }
-.balance_scale_btn{
-  border: none;
-  background: none;
-  
+.intro{
+  font-family: 'Cabin';
+  font-size: '2rem';
+  text-align: center;
+}
+.intro_btn{
+background-color: lightskyblue; 
+ border-radius: 5%;
+  border-width: 3px;
+  border-color: #014d73;
 }
 button:focus {outline:0;}
 .balance_scale_image{
@@ -193,11 +199,13 @@ button:focus {outline:0;}
   background: none;
   border: 0;
 }
-
-.start_btn_img{
-  height: 5rem;
+.start_btn{
   background: none;
   border: 0;
+}
+.start_btn_img{
+  height: 5rem;
+  
  
 }
 .add_to_list_btn:hover{

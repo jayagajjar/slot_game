@@ -12,11 +12,17 @@ function IndexApp() {
       <div className="row">
         <div className="col">
         <div className="title_div">
-          Slot Game Template
-          <button title="Click to see the Game" className="balance_scale_btn" onClick={showGame}>
-            This is Game Intro 
-          </button>
+          Slot Game Template<br/>
+          
           </div>
+          <div className="intro">
+        
+          Game Specifications<br/>
+          5x3 15 Win Line<br/>
+          <button title="Click to see the Game" className="title_div intro_btn" onClick={showGame}>Start </button>
+          </div>
+          
+            
           
         </div>
       </div>

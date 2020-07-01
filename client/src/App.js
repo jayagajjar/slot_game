@@ -109,8 +109,8 @@ const [reelStop, setReelStop] = useState([]);
             }
        
       <div style={{ alignSelf: "center"}}>
-      
-          <img className="start_btn_img" src="images/power.png" onClick={handleClick} ></img>
+            <button className="start_btn" title="Play"><img className="start_btn_img" src="images/power.png" onClick={handleClick} ></img></button>
+          
         </div>
         <div>
         <div id="windetails"/>
